@@ -35,4 +35,11 @@ public class Requires {
         }
         return this;
     }
+
+    public Requires positive(int value, String message) {
+        if (value <= 0) {
+            throw new IllegalArgumentException(message);
+        }
+        return this;
+    }
 }
